@@ -1,0 +1,30 @@
+/*
+<!--
+Alapati,Srikanth  -  1001877000
+Vasagiri,Bhanu Srinivasa Prahasith - 1001857486
+Rajaneni,Deepika Sai Chowdary - 1001868054
+-->
+*/
+
+
+
+.left {
+  background-color: lightcoral;
+
+}
+.right {
+  background-color:pink ;
+}
+
+.services
+{
+    position:relative;
+    text-align: left;
+    position: relative;
+    top:-460px;
+    left: 920px;
+    color: black;
+    text-align: justify;
+    font-size: 25px;
+
+}
