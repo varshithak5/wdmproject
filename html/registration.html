@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <a href="index.html">
+        <h1>Logo</h1>
+
+      </a>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="orderPage.html">Orders</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="orderForm">
+    <div class="heading">
+      <h1>Enter the Details</h1>
+    </div>
+    <div class="inputs">
+      <input type="text" name="name" value="" placeholder="Name">
+      <input type="email" name="email" value="" placeholder="Email">
+      <input type="number" name="phone" value="" placeholder="Phone Number">
+      <button type="button" name="button" class="order" onclick="registration()">Register</button>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="heading">
+      <h1>Registration Summary</h1>
+    </div>
+
+    <div class="details">
+      <p>Customer Id : <span id="id">#CD1244</span> </p>
+      <p>Customer Name : <span id="name"></span> </p>
+      <p>Email : <span id="email"></span> </p>
+      <p>Phone : <span id="phone"></span> </p>
+
+      <button type="button" name="button" onclick="modal()" class="btn__close"> Close</button>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+  function registration(){
+    let id = document.getElementsByName('name')[0].value;
+    let item = document.getElementsByName('email')[0].value;
+    let quant = document.getElementsByName('phone')[0].value;
+
+    document.getElementById('name').innerHTML = id;
+    document.getElementById('email').innerHTML = item;
+    document.getElementById('phone').innerHTML = quant;
+
+    document.getElementsByClassName('modal')[0].classList.add('active');
+  }
+
+  function modal(){
+    document.getElementsByClassName('modal')[0].classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

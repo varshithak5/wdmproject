@@ -1,0 +1,96 @@
+
+.hero__section{
+  background: url('https://fluffandfoldlaundromat.com/wp-content/uploads/2020/10/5-Benefits-of-a-Laundry-Service.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__section h1{
+  color : white;
+  font-size: 8rem;
+  font-family: 'Ephesis', cursive;
+  text-decoration: underline;
+}
+
+.services .heading{
+  text-align: center;
+  color : #00ADB5;
+  padding: 16px;
+  text-decoration: underline;
+}
+
+.service__container {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+  margin: 32px 5%;
+  grid-gap: 32px;
+}
+
+.service{
+  padding: 32px;
+  border-radius: 8px;
+  border : 1px solid #00ADB5;
+  text-align: center;
+}
+
+.service img{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.service p{
+  margin-top: 32px;
+}
+
+
+.other__services h1{
+  text-align: center;
+  color : #00ADB5;
+}
+
+.other__services .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 20%;
+
+}
+
+.other__services .links .link{
+  text-align: center;
+  background: #393E46;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.other__services .links .link a{
+  text-decoration: none;
+  color : white;
+}
+
+@media (max-width : 1023px) {
+  .other__services .links {
+    margin: 32px 10%;
+  }
+}
+
+@media (max-width : 767px) {
+  .hero__section h1{
+    font-size: 5.5rem;
+    text-align: center;
+  }
+  .service__container {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .other__services .links {
+    grid-template-columns: 1fr;
+  }
+
+
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/orderPage.css">
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <a href="index.html">
+        <h1>Logo</h1>
+
+      </a>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="options">
+    <div class="heading">
+      <p>Who are you?</p>
+    </div>
+    <div class="types">
+      <div class="type">
+        <a href="/registration.html">New Customer</a>
+      </div>
+      <div class="type">
+        <a href="javascript:void(0)" onclick="showForm()">Returning Customer</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="orderForm">
+    <div class="heading">
+      <h1>Enter the Details</h1>
+    </div>
+    <div class="inputs">
+      <input type="text" name="cust_id" value="" placeholder="Your Id">
+      <input type="text" name="item" value="" placeholder="Item">
+      <input type="number" name="quantity" value="" placeholder="Quantity">
+      <button type="button" name="button" class="order" onclick="placeOrder()">Place Order</button>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="heading">
+      <h1>Order Summary</h1>
+    </div>
+
+    <div class="details">
+      <p>Order Id : <span id="id">#OD1244</span> </p>
+      <p>Customer Id : <span id="cust_id"></span> </p>
+      <p>Order Item : <span id="item"></span> </p>
+      <p>Order Quantity : <span id="quantity"></span> </p>
+
+      <button type="button" name="button" onclick="modal()" class="btn__close"> Close</button>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+  function showForm(){
+    document.getElementsByClassName('options')[0].classList.toggle('active')
+    document.getElementsByClassName('orderForm')[0].classList.toggle('active')
+  }
+
+  function placeOrder(){
+    let id = document.getElementsByName('cust_id')[0].value;
+    let item = document.getElementsByName('item')[0].value;
+    let quant = document.getElementsByName('quantity')[0].value;
+
+    document.getElementById('cust_id').innerHTML = id;
+    document.getElementById('item').innerHTML = item;
+    document.getElementById('quantity').innerHTML = quant;
+
+    document.getElementsByClassName('modal')[0].classList.add('active');
+  }
+
+  function modal(){
+    document.getElementsByClassName('modal')[0].classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

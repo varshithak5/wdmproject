@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Equipments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/equipments.css">
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <a href="index.html">
+        <h1>Logo</h1>
+      </a>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="equipments">
+    <div class="heading">
+      <h1>
+        Equipments Available
+      </h1>
+    </div>
+    <div class="table">
+      <table id="content__table">
+
+      </table>
+    </div>
+
+    <div class="filter__sort">
+      <div class="filter filter__type">
+        <p><b>
+          Filter By Type
+        </b>
+        </p>
+
+        <select class="" name="filerType" oninput="filterType()">
+          <option value="0" selected>None</option>
+          <option value="1">Type 1</option>
+          <option value="2">Type 2</option>
+          <option value="3">Type 3</option>
+        </select>
+      </div>
+      <div class="filter filter__available">
+        <p><b>
+          Filter By Availability
+        </b>
+        </p>
+
+        <select class="" name="filerAvail" oninput="filterAvail()">
+          <option value="0" selected>None</option>
+          <option value="1">Available</option>
+          <option value="2">Not Available</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    let data = [
+      {
+        name : 'Washing Machine',
+        id : '#M001',
+        type : 1,
+        avail : 'Available',
+        availId : 1,
+        odid : "#OD234"
+      },
+      {
+        name : 'Washing Machine',
+        id : '#M002',
+        type : 2,
+        avail : 'Available',
+        availId : 1,
+        odid : "#OD234"
+      },
+      {
+        name : 'Washing Machine',
+        id : '#M003',
+        type : 3,
+        avail : 'Not Available',
+        availId : 2,
+        odid : "#OD234"
+      },
+      {
+        name : 'Washing Machine',
+        id : '#M004',
+        type : 1,
+        avail : 'Available',
+        availId : 1,
+        odid : "#OD234"
+      },
+      {
+        name : 'Washing Machine',
+        id : '#M005',
+        type : 2,
+        avail : 'Not Available',
+        availId : 2,
+        odid : "#OD234"
+      }
+  ];
+
+  function filterType(){
+      let value = document.getElementsByName('filerType')[0].value;
+      let table = document.getElementById('content__table');
+      table.innerHTML = ``;
+      table.innerHTML = `
+      <thead>
+        <th>
+          Name
+        </th>
+        <th>
+          Equipment ID
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Availability
+        </th>
+        <th>
+          Order Id
+        </th>
+
+      </thead>
+      `;
+
+      if(value == 0){
+        data.forEach((item, i) => {
+          table.innerHTML +=`
+          <tr>
+            <td>
+              ${item.name}
+            </td>
+            <td>
+              ${item.id}
+            </td>
+            <td>
+              ${item.type}
+            </td>
+            <td>
+              ${item.avail}
+            </td>
+            <td>
+              ${item.odid}
+            </td>
+          </tr>
+          `;
+        });
+      }
+
+    else {
+      data.forEach((item, i) => {
+        if(item.type == value){
+          table.innerHTML +=`
+          <tr>
+            <td>
+              ${item.name}
+            </td>
+            <td>
+              ${item.id}
+            </td>
+            <td>
+              ${item.type}
+            </td>
+            <td>
+              ${item.avail}
+            </td>
+            <td>
+              ${item.odid}
+            </td>
+          </tr>
+          `;
+        }
+      });
+
+    }
+  }
+
+
+  function filterAvail(){
+    let value = document.getElementsByName('filerAvail')[0].value;
+    let table = document.getElementById('content__table');
+    table.innerHTML = ``;
+    table.innerHTML = `
+    <thead>
+      <th>
+        Name
+      </th>
+      <th>
+        Equipment ID
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Availability
+      </th>
+      <th>
+        Order Id
+      </th>
+
+    </thead>
+    `;
+    if(value == 0){
+      data.forEach((item, i) => {
+        table.innerHTML +=`
+        <tr>
+          <td>
+            ${item.name}
+          </td>
+          <td>
+            ${item.id}
+          </td>
+          <td>
+            ${item.type}
+          </td>
+          <td>
+            ${item.avail}
+          </td>
+          <td>
+            ${item.odid}
+          </td>
+        </tr>
+        `;
+      });
+    }
+    else {
+      data.forEach((item, i) => {
+        if(item.availId == value){
+          table.innerHTML +=`
+          <tr>
+            <td>
+              ${item.name}
+            </td>
+            <td>
+              ${item.id}
+            </td>
+            <td>
+              ${item.type}
+            </td>
+            <td>
+              ${item.avail}
+            </td>
+            <td>
+              ${item.odid}
+            </td>
+          </tr>
+          `;
+        }
+    })
+  }
+}
+
+  filterType();
+</script>
+</body>
+</html>

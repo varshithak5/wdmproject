@@ -1,0 +1,63 @@
+.equipments .heading{
+  text-align: center;
+  margin: 32px;
+}
+
+.equipments .table{
+  width: 80%;
+  margin : auto;
+}
+
+
+.equipments .table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.equipments table th{
+  padding: 16px;
+  background: #00ADB5;
+  color : white;
+}
+
+.equipments table tbody:nth-child(odd){
+  background: #F1F1F1;
+}
+
+.equipments table tbody:nth-child(even){
+  background: #F4F4F4;
+}
+
+.equipments table td{
+  padding: 16px;
+  text-align: center;
+}
+
+.filter__sort{
+  display: flex;
+  justify-content: center;
+}
+
+.filter{
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+.filter p{
+  margin-bottom: 8px;
+}
+
+.filter select{
+  background: #EEEEEE;
+}
+
+@media (max-width : 767px) {
+  .equipments .table{
+    position: relative;
+    overflow: scroll;
+  }
+
+  .equipments .table table{
+    min-width: 700px;
+  }
+}
