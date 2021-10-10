@@ -9,15 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/orderPage.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/orderPage.css">
 </head>
 <body>
   <div class="navigation">
     <div class="logo">
-      <a href="index.html">
-        <h1>Logo</h1>
-
+      <a href="../index.html">
+        <h1>InstaWash</h1>
       </a>
     </div>
     <div class="links">
@@ -41,7 +40,7 @@
     </div>
     <div class="types">
       <div class="type">
-        <a href="/registration.html">New Customer</a>
+        <a href="registration.html">New Customer</a>
       </div>
       <div class="type">
         <a href="javascript:void(0)" onclick="showForm()">Returning Customer</a>
@@ -51,14 +50,16 @@
 
   <div class="orderForm">
     <div class="heading">
-      <h1>Enter the Details</h1>
+      <h1>Enter Order Details</h1>
     </div>
-    <div class="inputs">
-      <input type="text" name="cust_id" value="" placeholder="Your Id">
+    <form class="inputs">
+      <input type="text" name="emp_id" value="" placeholder="Employer Id">
+      <input type="text" name="cust_id" value="" placeholder="Customer Id">
+      <input type="text" name="service" value="" placeholder="Service">
       <input type="text" name="item" value="" placeholder="Item">
-      <input type="number" name="quantity" value="" placeholder="Quantity">
+      <input type="number" name="weight" value="" placeholder="Weight">
       <button type="button" name="button" class="order" onclick="placeOrder()">Place Order</button>
-    </div>
+    </form>
   </div>
 
   <div class="modal">
@@ -69,8 +70,9 @@
     <div class="details">
       <p>Order Id : <span id="id">#OD1244</span> </p>
       <p>Customer Id : <span id="cust_id"></span> </p>
+      <p>Service : <span id="service"></span> </p>
       <p>Order Item : <span id="item"></span> </p>
-      <p>Order Quantity : <span id="quantity"></span> </p>
+      <p>Weight : <span id="weight"></span> </p>
 
       <button type="button" name="button" onclick="modal()" class="btn__close"> Close</button>
     </div>

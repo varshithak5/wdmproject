@@ -12,6 +12,7 @@ body{
 .navigation .logo a{
   color : white;
   text-decoration: none;
+  
 }
 
 .navigation{
@@ -29,6 +30,7 @@ body{
   justify-content: space-between;
   list-style: none;
   align-items: center;
+  
 }
 
 

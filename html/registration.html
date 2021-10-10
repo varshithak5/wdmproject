@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/registration.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/registration.css">
 </head>
 <body>
   <div class="navigation">
     <div class="logo">
-      <a href="index.html">
-        <h1>Logo</h1>
+      <a href="../index.html">
+        <h1>InstaWash</h1>
 
       </a>
     </div>
@@ -39,14 +39,16 @@
 
   <div class="orderForm">
     <div class="heading">
-      <h1>Enter the Details</h1>
+      <h1>Enter Customer Details</h1>
     </div>
-    <div class="inputs">
-      <input type="text" name="name" value="" placeholder="Name">
+    <form class="inputs">
+      <input type="text" name="firstName" value="" placeholder="First Name">
+      <input type="text" name="lastName" value="" placeholder="Last Name">
+      <input type="text" name="middleIn" value="" placeholder="Middle Initial">
       <input type="email" name="email" value="" placeholder="Email">
-      <input type="number" name="phone" value="" placeholder="Phone Number">
+      <input type="number" name="phoneNumber" value="" placeholder="Phone Number">
       <button type="button" name="button" class="order" onclick="registration()">Register</button>
-    </div>
+    </form>
   </div>
 
   <div class="modal">
@@ -56,7 +58,9 @@
 
     <div class="details">
       <p>Customer Id : <span id="id">#CD1244</span> </p>
-      <p>Customer Name : <span id="name"></span> </p>
+      <p>First Name : <span id="firstName"></span> </p>
+      <p>Last Name : <span id="lastName"></span> </p>
+      <p>Middle Initial : <span id="middleIn"></span> </p>
       <p>Email : <span id="email"></span> </p>
       <p>Phone : <span id="phone"></span> </p>
 
