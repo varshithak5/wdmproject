@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/delivery.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/delivery.css">
 </head>
 <body>
   <div class="navigation">
     <div class="logo">
-      <a href="index.html">
-        <h1>Logo</h1>
+      <a href="../index.html">
+        <h1>InstaWash</h1>
       </a>
     </div>
     <div class="links">
@@ -38,39 +38,42 @@
         Delivery / Pickup Details
       </h1>
     </div>
-    <div class="table">
-      <table id="content__table">
-
-      </table>
-    </div>
 
     <div class="filter__sort">
-      <div class="filter filter__type">
+      <div class="filter">
         <p><b>
           Filter By Status
         </b>
         </p>
 
-        <select class="" name="filerType" oninput="filterStatus()">
+        <select name="filerType" oninput="filterStatus()">
           <option value="0" selected>None</option>
           <option value="1">Pending</option>
           <option value="2">Late</option>
           <option value="3">Complete</option>
         </select>
       </div>
-      <div class="filter filter__available">
+      <div class="filter">
         <p><b>
           Filter By Type
         </b>
         </p>
 
-        <select class="" name="filerAvail" oninput="filterType()">
+        <select name="filerAvail" oninput="filterType()">
           <option value="0" selected>None</option>
           <option value="1">Delivery</option>
           <option value="2">Pickup</option>
         </select>
-      </div>
+      </div>  
     </div>
+
+    <div class="table">
+      <table id="content__table">
+
+      </table>
+    </div>
+
+    
   </div>
 
   <script type="text/javascript">
@@ -169,7 +172,6 @@
   function filterType(){
     let value = document.getElementsByName('filerAvail')[0].value;
     let table = document.getElementById('content__table');
-    table.innerHTML = ``;
     table.innerHTML = `
     <thead>
       <th>
