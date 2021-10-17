@@ -26,7 +26,7 @@
 
 .other__services .links {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 32px;
   justify-content: center;
   align-items: center;

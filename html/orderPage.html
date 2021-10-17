@@ -48,16 +48,28 @@
     </div>
   </div>
 
-  <div class="orderForm">
+  <div class="forms">
     <div class="heading">
       <h1>Enter Order Details</h1>
     </div>
     <form class="inputs">
       <input type="text" name="emp_id" value="" placeholder="Employer Id">
       <input type="text" name="cust_id" value="" placeholder="Customer Id">
-      <input type="text" name="service" value="" placeholder="Service">
-      <input type="text" name="item" value="" placeholder="Item">
       <input type="number" name="weight" value="" placeholder="Weight">
+      <input type="number" name="rate" value="" placeholder="Rate"><br>
+      <label for="services">Choose the Service:</label>      
+      <select id="service" name="service">
+        <option value="washing">Washing</option>
+        <option value="dry">DrynCLeaning</option>
+        <option value="pressing">Pressing</option>
+      </select><br><br>
+      <label for="types">Choose a type:</label>      
+      <select id="type" name="type">
+        <option value="pickup">Pick Up</option>
+        <option value="delivery">Delivery</option>
+      </select><br><br>
+      
+      <input type="text" name="comments" value="" placeholder="Comments">
       <button type="button" name="button" class="order" onclick="placeOrder()">Place Order</button>
     </form>
   </div>
@@ -82,7 +94,7 @@
 <script type="text/javascript">
   function showForm(){
     document.getElementsByClassName('options')[0].classList.toggle('active')
-    document.getElementsByClassName('orderForm')[0].classList.toggle('active')
+    document.getElementsByClassName('forms')[0].classList.toggle('active')
   }
 
   function placeOrder(){
